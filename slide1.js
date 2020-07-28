@@ -104,8 +104,15 @@ async function init() {
     .append("text")
     .attr("dy", ".3em")
     .style("text-anchor", "middle")
-    .style("font-size", 16)
-    .text((d) => `${d.count}`);
+    .style("font-size", (d, i) => {
+      if (i == 0) return 12;
+      if (i == 2 || i == 7) return 10;
+      return 14;
+    })
+    .text((d, i) => {
+      if (i == 0 || i == 2 || i == 7) return `${d.tweet_text}`;
+      return `${d.count}`;
+    });
 
   // set simulation's nodes to our newly created nodes array
   // simulation starts running automatically once nodes are set
