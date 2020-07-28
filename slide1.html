@@ -1,16 +1,21 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>American Attitudes towards Gay Marriage</title>
+    <title>Trump Tweets: A Narrative Visualization</title>
     <link rel="stylesheet" href=".css/normalize.css" />
     <link rel="stylesheet" href="./css/skeleton.css" />
     <link rel="stylesheet" href="./css/custom.css" />
+    <style>
+      circle {
+        stroke-width: 1px;
+      }
+    </style>
   </head>
 
   <body>
     <div class="container">
       <section class="header">
-        <h2 class="title">American Attitudes towards Gay Marriage</h2>
+        <h2 class="title">Trump Tweets: A Narrative Visualization</h2>
       </section>
       <br />
       <div class="navbar-spacer"></div>
@@ -41,12 +46,37 @@
         </div>
       </nav>
       <section class="body">
-        <div>Slide 1</div>
-        <svg width="600" height="500"></svg>
+        <div class="row">
+          <h4>The President's Most Repeated Tweets</h4>
+        </div>
+        <div class="row">
+          <p>
+            The President has a unique style of grammar that utilizes the same
+            words and phrases over and over again. Sometimes, he seems to repeat
+            himself over and over again. When it comes to twitter, what tweets
+            has the president repeated the most?
+          </p>
+        </div>
+        <div class="row">
+          <div class="six columns">
+            <table class="u-full-width frequentTweetsTable">
+              <thead>
+                <tr>
+                  <th>Tweets</th>
+                  <th>Tweet Text</th>
+                </tr>
+              </thead>
+              <tbody id="appendTweetData"></tbody>
+            </table>
+          </div>
+          <div class="six columns">
+            <div id="vis"></div>
+          </div>
+        </div>
       </section>
     </div>
   </body>
   <script src="https://d3js.org/d3.v5.js"></script>
   <script src="./index.js"></script>
-  <script src="./bar.js"></script>
+  <script src="./slide1.js"></script>
 </html>
