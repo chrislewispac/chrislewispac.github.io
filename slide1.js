@@ -106,11 +106,11 @@ async function init() {
     .style("text-anchor", "middle")
     .style("font-size", (d, i) => {
       if (i == 0) return 12;
-      if (i == 2 || i == 7) return 10;
+      if (i == 2 || i == 6) return 10;
       return 14;
     })
     .text((d, i) => {
-      if (i == 0 || i == 2 || i == 7) return `${d.tweet_text}`;
+      if (i == 0 || i == 2 || i == 6) return `${d.tweet_text}`;
       return `${d.count}`;
     });
 
