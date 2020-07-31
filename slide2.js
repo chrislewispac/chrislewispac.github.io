@@ -10,9 +10,9 @@ async function init() {
   }
 
   let pieData = {
-    "0": bins[0],
-    "1": bins[1],
-    ">2":
+    "0 !": bins[0],
+    "1 !": bins[1],
+    "> 2 !":
       bins[2] +
       bins[3] +
       bins[4] +
@@ -125,7 +125,7 @@ async function init() {
     .enter()
     .append("text")
     .text(function (d) {
-      return d.data.value;
+      return d.data.key;
     })
     .attr("transform", function (d) {
       var pos = outerArc.centroid(d);

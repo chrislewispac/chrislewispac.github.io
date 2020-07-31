@@ -38,22 +38,33 @@
       <section class="body">
         <div class="row">
           <h4>When does Trump tweet certain things?</h4>
-          <h5>Explore on your own</h5>
           <p>
-            Filters to apply: (1) Before becoming president/after becoming
-            president (2) Mentions another politician (3) has exclaimation mark
-            (4) occured when he should have been asleep (5) mentions golf (6)
-            uses a hashtag
+            Explore more about when Trump posts to twitter. Does he sleep more
+            since becoming president? Does he use exclaimation marks more in the
+            morning? When is he most likely to mention golf?
           </p>
         </div>
-        <label class="exclaimation">
-          <input
-            type="checkbox"
-            id="exclaimation"
-            onchange="checkExclaimation(this)"
-          />
-          <span class="label-body">Has Exclaimation Mark!</span>
-        </label>
+        <div class="row">
+          <div class="four columns">
+            <label class="exclaimation">
+              <input type="checkbox" id="exclaimation" />
+              <span class="label-body">Has Exclaimation Mark!</span>
+            </label>
+          </div>
+          <div class="three columns">
+            <label class="exclaimation">
+              <input type="checkbox" id="golf" />
+              <span class="label-body">Mentions Golf</span>
+            </label>
+          </div>
+
+          <div class="four columns">
+            <label class="since_president">
+              <input type="checkbox" id="since_president" />
+              <span class="label-body">Since Becoming President</span>
+            </label>
+          </div>
+        </div>
         <div id="vis"></div>
       </section>
     </div>

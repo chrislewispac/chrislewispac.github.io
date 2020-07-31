@@ -105,12 +105,18 @@ async function init() {
     .attr("dy", ".3em")
     .style("text-anchor", "middle")
     .style("font-size", (d, i) => {
-      if (i == 0) return 12;
-      if (i == 2 || i == 6) return 10;
+      if (d.tweet_text == "MAKE AMERICA GREAT AGAIN!") return 12;
+      if (d.tweet_text == "LAW & ORDER!" || d.tweet_text == "WITCH HUNT!")
+        return 10;
       return 14;
     })
     .text((d, i) => {
-      if (i == 0 || i == 2 || i == 6) return `${d.tweet_text}`;
+      if (
+        d.tweet_text == "MAKE AMERICA GREAT AGAIN!" ||
+        d.tweet_text == "LAW & ORDER!" ||
+        d.tweet_text == "WITCH HUNT!"
+      )
+        return `${d.tweet_text}`;
       return `${d.count}`;
     });
 
