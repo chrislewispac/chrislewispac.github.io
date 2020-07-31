@@ -30,9 +30,6 @@
               <a class="navbar-link" href="slide3.html">Slide 3</a>
             </li>
             <li class="navbar-item">
-              <a class="navbar-link" href="slide4.html">Slide 4</a>
-            </li>
-            <li class="navbar-item">
               <a class="navbar-link" href="essay.html">Essay</a>
             </li>
           </ul>
@@ -40,16 +37,28 @@
       </nav>
       <section class="body">
         <div class="row">
-          <h4>Ok, I'm on the edge of my seat. When can I see more?</h4>
+          <h4>When does Trump tweet certain things?</h4>
+          <h5>Explore on your own</h5>
+          <p>
+            Filters to apply: (1) Before becoming president/after becoming
+            president (2) Mentions another politician (3) has exclaimation mark
+            (4) occured when he should have been asleep (5) mentions golf (6)
+            uses a hashtag
+          </p>
         </div>
-        <div class="row">
-          <p>Well, let's take a look at when the president tweets....</p>
-        </div>
-        <svg width="600" height="500"></svg>
+        <label class="exclaimation">
+          <input
+            type="checkbox"
+            id="exclaimation"
+            onchange="checkExclaimation(this)"
+          />
+          <span class="label-body">Has Exclaimation Mark!</span>
+        </label>
+        <div id="vis"></div>
       </section>
     </div>
   </body>
   <script src="https://d3js.org/d3.v5.js"></script>
   <script src="./index.js"></script>
-  <script src="./bar.js"></script>
+  <script src="./slide3.js"></script>
 </html>
